@@ -54,6 +54,11 @@ section {
     max-width: 1000px;
 }
 
+section p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
 /* Section Titles */
 h2 {
     font-size: 2em;
