@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="css/leaflet-measure.css">
         <style>
         #map {
-            width: 90%;
+            width: 95%;
             height: 530px;
         }
         
@@ -61,8 +61,11 @@
             highlightLayer.openPopup();
         }
         var map = L.map('map', {
-            zoomControl:false, maxZoom:28, minZoom:2
-        }).fitBounds([[-49.82934243836937,-180.0],[84.57235410022378,180.0]]);
+          zoomControl: false,
+          maxZoom: 28,
+          minZoom: 2
+        }).fitBounds([[-49.82934243836937, -120.0], [84.57235410022378, 180.0]]); // These coordinates ensure the map's bounds fit the global view
+
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -142,8 +145,8 @@
         document.getElementsByClassName('leaflet-control-measure-toggle')[0].className += ' fas fa-ruler';
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
-            map.setMaxBounds(map.getBounds());
-            map.setMinZoom(map.getZoom());
+            // map.setMaxBounds(map.getBounds());
+            // map.setMinZoom(map.getZoom());
         }
         map.createPane('pane_Basemap_0');
         map.getPane('pane_Basemap_0').style.zIndex = 400;

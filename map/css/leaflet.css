@@ -483,6 +483,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	padding: 1px;
 	text-align: left;
 	border-radius: 12px;
+	max-width: 250px;  /* limit popup width */
+  	white-space: normal; /* allow wrapping */
+  	word-wrap: break-word; /* wrap long words */
 	}
 .leaflet-popup-content {
 	margin: 13px 24px 13px 20px;
@@ -659,3 +662,4 @@ svg.leaflet-image-layer.leaflet-interactive path {
 		print-color-adjust: exact;
 		}
 	}
+
