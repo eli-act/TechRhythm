@@ -53,10 +53,11 @@ function initSigma(config) {
 		drawProps={
         defaultLabelColor: "#000",
         defaultLabelSize: 14,
+        labelSize: "fixed",
         defaultLabelBGColor: "#ddd",
         defaultHoverLabelBGColor: "#002147",
         defaultLabelHoverColor: "#fff",
-        labelThreshold: 10,
+        labelThreshold: 0,
         defaultEdgeType: "curve",
         hoverFontStyle: "bold",
         fontStyle: "bold",
@@ -619,5 +620,42 @@ function showCluster(a) {
     }
     return !1
 }
+
+// main.js
+
+// Load your graph from data.json (assuming it's already loaded as 'graph')
+fetch('data/data.json')
+  .then(response => response.json())
+  .then(graph => {
+
+    // ---- 1. Scale edge thickness by weight and make them semi-transparent ----
+    let maxWeight = Math.max(...graph.edges.map(e => e.weight));
+    graph.edges.forEach(edge => {
+      edge.size = (edge.weight / maxWeight) * 8 + 1; // edge thickness 1–9 px
+      edge.color = 'rgba(100, 100, 200, 0.4)'; // light blue, semi-transparent
+    });
+
+        // ---- 4. Optional: Hover highlighting ----
+    s.bind('enterNode', function(e) {
+      e.data.node.color = '#ff3333'; // highlight node on hover
+      s.refresh();
+    });
+    s.bind('leaveNode', function(e) {
+      e.data.node.color = '#6699cc'; // revert color
+      s.refresh();
+    });
+
+    // ---- 5. Optional: Click recentering ----
+    s.bind('clickNode', function(e) {
+      const node = e.data.node;
+      s.getCamera().animate(
+        { x: node.x, y: node.y, ratio: 0.5 },
+        { duration: 600 }
+      );
+    });
+
+  })
+  .catch(err => console.error('Error loading graph:', err));
+
 
 
