@@ -26,8 +26,31 @@
 
     <!-- About Section -->
     <section id="about">
-        <h2>About This Project</h2>
-        <p>This project aims to explore the linguistic diversity within the Eurovision Song Contest using digital humanities tools like text analysis and geospatial visualizations.</p>
+        <h2>About The Project</h2>
+        <p>Our project examines 724 songs across an 18 year period from 2008 to 2025, corresponding to the introduction of the two-semifinal and one-final contest format, which stabilized the participation and competition structure. Although songs were selected for the 2020 contest, the event was cancelled due to the COVID-19 pandemic. Because this year lacks performance, voting and ranking data, it has been excluded from the top five songs’ text analysis section, which relies on this data. Regarding project limitations, we do not claim to identify the lyrical or linguistic intentions of individual artists or national broadcasters. Lyrics vary in length, structure and translation quality, and multilingual songs complicate categorization. Frequency-based methods privilege repetition over nuance, particularly in smaller language groups. The findings should thus be understood as patterns and tendencies rather than definitive explanations of cultural or political motivation.</p>
+    
+        <h2>Methodology and Dataset</h2>
+        <p>The main structure of our combined digital dataset was built in Excel by combining relevant data from two existing datasets: <a href="https://www.kaggle.com/datasets/minitree/eurovision-song-lyrics"><i>Lyrics of every Eurovision song in the history</i></a> (curator: minitree), and <a href="https://doi.org/10.5281/zenodo.10088892"><i>The Eurovision Song Contest Dataset</i></a> (curator: Janne Spijkervet). 
+The former primarily provides data on the general song attributes, such as source country, year, languages, lyrics and their English translations, while the latter offers structured public response data of rankings and scores for each relevant song. We filtered both datasets to include only songs within our timefame from 2008 to 2025, resulting in a combined dataset of 724 songs. This was then supplemented by linking language metadata with every language's family and family branch. The data also had to be checked and cleaned for data validity before analysis, e.g. to remove non-lyrical content such as [Chorus] and [Verse] from the lyrics' data fields and to merge fields with same values, but different names, such as Czechia and Czech Republic under participating countries. For analysis, we used digital tools like Voyant Tools, Tableau Public, Gephi and QGIS; for the geospatial map visualization, the basemap was sourced from the <a href="https://www.naturalearthdata.com/">Natural Earth</a> public domain map dataset and displayed on this website with the help of the Leaflet JavaScript library. The website itself was built using GitHub and GitHub Pages.</p>
+        </p>
+
+        <h2>The Team</h2>
+        <p>Our team, <b>TechRhythm</b>, consists of Elīza Anna Actiņa, Jeļizaveta Larionova and Amanda Sprukte - students of the Digital Humanities master's programme at Riga Technical University. This project has been created as part of the Introduction to Digital Humanities course in Fall/Winter 2025.</p>
+        
+        <h2>Bibliography</h2>
+        <p>Adamska, K., & Reiss, J. (2025). Predicting Eurovision Song Contest results: A hit song science approach. Transactions of the International Society for Music Information Retrieval, 8(1), 93 107. <a href="https://transactions.ismir.net/articles/10.5334/tismir.214">https://transactions.ismir.net/articles/10.5334/tismir.214</a></p>
+        <p>Ahlberg, M. (2023). Beyond the music: Exploring the dynamics of national and European identity in the Eurovision Song Contest (Publication ID - URN: urn:nbn:se:mau:diva-62148) [Bachelor’s thesis, Malmö University]. Digitala Vetenskapliga Arkivet.</p>
+        <p>Barbeau, E. (2022). English language dominance in the Eurovision Song Contest: A sociolinguistic analysis [Unpublished master’s thesis]. Vytautas Magnus University. <a href="https://portalcris.vdu.lt/server/api/core/bitstreams/f3c60b99-ff5e-435a940c88d53124680c/content">https://portalcris.vdu.lt/server/api/core/bitstreams/f3c60b99-ff5e-435a940c88d53124680c/content</a></p>
+        <p>Bohlman, A. F., & Polychronakis, I. (2013). Eurovision everywhere: A kaleidoscopic vision of the Grand Prix. In D. Tragaki (Ed.), Empire of song: Europe and nation in the Eurovision Song Contest (pp. 57-73). Scarecrow Press.</p>
+        <p>Comrie, B. (Ed.) (2009). The world’s major languages (2nd ed.). Routledge. <a href="https://doi.org/10.4324/9780203301524">https://doi.org/10.4324/9780203301524</a></p>
+        <p>minitree. (2022). Lyrics of every Eurovision song in the history [Data set]. Kaggle. <a href="https://www.kaggle.com/datasets/minitree/eurovision-song-lyrics">https://www.kaggle.com/datasets/minitree/eurovision-song-lyrics</a></p>
+        <p>Motschenbacher, H. (2016). Language choice practices in the ESC. In Language, normativity and Europeanisation. Postdisciplinary studies in discourse (pp. 117–151). Palgrave Macmillan, London. <a href="https://doi.org/10.1057/978-1-137-56301-9_4">https://doi.org/10.1057/978-1-137-56301-9_4</a></p>
+        <p>Palacios-Hidalgo, F. J., & Huertas-Abril, C. A. (2025). Do songs in English do better? Studying linguistic diversity within Eurovision Song Contest entries. Diacrítica, 39(2), 389–403. <a href="https://doi.org/10.21814/diacritica.6280">https://doi.org/10.21814/diacritica.6280</a></p>
+        <p>Spijkervet, J. (2020). The Eurovision dataset (Version 3.0) [Data set]. Zenodo. <a href="https://doi.org/10.5281/zenodo.10088892">https://doi.org/10.5281/zenodo.10088892</a></p>
+        <p>Thorne, S. L., & Ivković, D. (2015). Multilingual Eurovision meets plurilingual YouTube: Linguascaping discursive ontologies. In D. A. Koike & C. S. Blyth (Eds.), Dialogue in multilingual and multimodal communities (pp. 167-192). John Benjamins Publishing Company.</p>
+        <p>Torres, G. (2022). Pan-European, national, regional and minority identities in the Eurovision Song Contest. In K. Jakubowicz & M. Sükösd (Eds.), Media, nationalism and European identities (pp. 247-268). Central European University Press.</p>
+    
+    
     </section>
 
     <!-- Footer -->
